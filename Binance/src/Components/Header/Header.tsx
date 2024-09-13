@@ -1,17 +1,27 @@
 import React from 'react'
-import Grid from '@mui/material/Grid2';
 import './Header.css'
 
 
 export default function Header() {
     return (
         <>
-            <Grid container className='Header' style={{ backgroundColor: 'blue' }}>
+            <header className='Header' >
 
-                <Grid size={{ xl: 6, md: 6 }} className='Header-left'>left</Grid>
-                <Grid className='Header-right'>right</Grid>
+                <div className='Header_left'>
+                    <img className='logo' src="./images/binance.png" alt="" />
+                    <ul className='Header_left_list'>
+                        <li>Markets</li>
+                        <li>Trade</li>
+                        <li>Derivatives</li>
+                        <li>More</li>
 
-            </Grid>
+                    </ul>
+                </div>
+
+
+                <div className='Header_right'>right</div>
+
+            </header>
 
         </>
     )
