@@ -29,6 +29,12 @@
     list-style: none;
 }
 
+.Header_left_list li:hover {
+    color: var(--textHover);
+    cursor: pointer;
+
+}
+
 .Header_right {
     display: flex;
 
