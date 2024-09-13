@@ -1,0 +1,27 @@
+/* styles.css */
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: block;
+}
+
+.Header_holder {
+  position: relative;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 60px;
+  background-color: #181A20;
+}
+
+@media (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
