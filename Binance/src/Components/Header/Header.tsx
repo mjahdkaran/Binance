@@ -4,11 +4,7 @@ import './Header.css'
 
 
 export default function Header() {
-    const [isDarkModeOn, setIsDarkModeOn] = useState(true)
-    const clickHandler = () => {
-        setIsDarkModeOn(!isDarkModeOn)
 
-    }
 
     return (
         <>
@@ -29,7 +25,12 @@ export default function Header() {
                 <div className='Header_right'>
                     <button className='button login'>Log In</button>
                     <button className='button signup'>Sign Up</button>
-                    <WbSunnyIcon onClick={clickHandler} sx={{ color: isDarkModeOn ? '#fff' : '#0000', '&:hover': { color: 'var(--textHover)' } }} />
+                    <WbSunnyIcon
+                        // onClick={clickHandler}
+                        sx={{
+                            //  color: isDarkModeOn ? '#fff' : '#0000', 
+                            '&:hover': { color: 'var(--textHover)' }
+                        }} />
                 </div>
 
             </header>

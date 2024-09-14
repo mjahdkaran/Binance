@@ -1,7 +1,10 @@
 :root {
   --darkkMode: rgb(24, 26, 32);
+  --lightMode: #ffff;
+  --textlightMode: #0000;
   --textHover: rgb(240, 185, 11);
   --textColor: #ffff;
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;

@@ -14,9 +14,18 @@
   left: 0;
   top: 0;
   height: 60px;
-  background-color: #181A20;
+
 
 }
+
+.dark {
+  background-color: var(--darkkMode);
+}
+
+.light {
+  background-color: var(--lightMode);
+}
+
 
 @media (max-width: 768px) {
   .mobile {
