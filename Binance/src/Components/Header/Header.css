@@ -40,6 +40,7 @@
 
 .Header_right {
     display: flex;
+    align-items: center;
     padding-right: 20px;
 
 }
@@ -64,4 +65,5 @@
 .signup {
     width: 70px;
     background-color: var(--textHover);
+    margin-right: 10px;
 }
