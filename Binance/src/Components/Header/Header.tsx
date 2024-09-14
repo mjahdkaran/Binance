@@ -13,13 +13,16 @@ export default function Header() {
                         <li>Markets</li>
                         <li>Trade</li>
                         <li>Derivatives</li>
-                        <li>More</li>
+                        <li>More ...</li>
 
                     </ul>
                 </div>
 
 
-                <div className='Header_right'>right</div>
+                <div className='Header_right'>
+                    <button className='button login'>Log In</button>
+                    <button className='button signup'>Sign Up</button>
+                </div>
 
             </header>
 
