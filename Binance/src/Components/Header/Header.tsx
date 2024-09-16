@@ -27,8 +27,8 @@ export default function Header({ toggle, isDarkModeOn }: HeaderProps) {
 
 
                 <div className='Header_right'>
-                    <button className={isDarkModeOn ? 'button login' : 'button login loginlight'} >Log In</button>
-                    <button className='button signup' >Sign Up</button>
+                    <button className={isDarkModeOn ? 'button login' : 'button login loginlight'} style={{ marginRight: '10px', width: "60px" }}>Log In</button>
+                    <button className='button signup' style={{ width: '70px', marginRight: '10px' }}>Sign Up</button>
                     {isDarkModeOn ? <NightlightIcon
                         onClick={toggle}
                         sx={{

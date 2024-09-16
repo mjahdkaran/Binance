@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import './Navbar.css'
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn'; import './Navbar.css'
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+import AddTaskIcon from '@mui/icons-material/AddTask';
+import MenuItem from '../MenuItem/menuItem';
 
 interface HeaderProps {
     toggle: () => void; // Function type for the toggle function
@@ -11,7 +14,10 @@ export default function Navbar({ toggle, isDarkModeOn }: HeaderProps) {
     const [isShowMenu, setIsShowMenu] = useState(false)
     const showToggle = () => {
         setIsShowMenu(prev => !prev)
+
     }
+    const menuClass = isShowMenu ? 'show' : '';
+    const themeClass = isDarkModeOn ? 'dark' : 'light';
     return (
         <>
             <div className='navbar_holder '
@@ -24,24 +30,23 @@ export default function Navbar({ toggle, isDarkModeOn }: HeaderProps) {
                 <div className='navbar_right'>
                     {isShowMenu ? <CloseRoundedIcon
                         onClick={showToggle}
-                        sx={{ color: isDarkModeOn ? 'var(--lightColor)' : 'var(--darkColor)' }} /> :
+                        sx={{ color: themeClass }} /> :
                         <MenuRoundedIcon
                             onClick={showToggle}
-                            sx={{ color: isDarkModeOn ? 'var(--lightColor)' : 'var(--darkColor)' }} />}
+                            sx={{ color: themeClass }} />}
 
                 </div>
 
 
             </div>
-            <div className={`left_menu ${isShowMenu ? 'show' : ''} ${isDarkModeOn ? 'dark' : 'light'}`}>
+            <div className={`left_menu ${menuClass} ${themeClass}`}>
                 <div className='button_holder'>
-                    <button className={`button login ${isDarkModeOn ? '' : 'loginlight'}`} >Log In</button>
-                    <button className='button signup_mo' >Sign Up</button></div>
-                <ul className={`left_menu_list ${isDarkModeOn ? 'dark' : 'light'}`}>
-                    <li className='left_menu_item'>Markets</li>
-                    <li className='left_menu_item'>Trade</li>
-                    <li className='left_menu_item'>Derivatives</li>
-
+                    <button className={`button login ${isDarkModeOn ? '' : 'loginlight'}`} style={{ width: '45%' }} >Log In</button>
+                    <button className='button signup' style={{ width: '45%' }} >Sign Up</button></div>
+                <ul className={`left_menu_list ${themeClass}`}>
+                    <MenuItem icon={MonetizationOnIcon} title='Markets' isDarkModeOn />
+                    <MenuItem icon={AddCircleIcon} title='Trade' isDarkModeOn />
+                    <MenuItem icon={AddTaskIcon} title='Derivatives' isDarkModeOn />
                 </ul>
             </div>
         </>

@@ -38,7 +38,6 @@
     width: 100%;
     position: absolute;
     z-index: 999;
-    background-color: yellow;
     display: none;
 
 
@@ -53,7 +52,15 @@
     background-color: inherit;
 }
 
+.button_holder {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
 .left_menu_item {
     list-style: none;
+    display: flex;
+    margin-bottom: 5px;
 
 }

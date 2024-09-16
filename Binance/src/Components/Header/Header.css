@@ -57,8 +57,7 @@
 .login {
     color: var(--lightColor);
     background-color: rgba(255, 255, 255, 0.2);
-    margin-right: 10px;
-    width: 60px;
+
 
 }
 
@@ -69,7 +68,6 @@
 
 
 .signup {
-    width: 70px;
     background-color: var(--hoverColor);
-    margin-right: 10px;
+
 }
