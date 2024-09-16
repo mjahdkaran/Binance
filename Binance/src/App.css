@@ -18,18 +18,13 @@
 
 }
 
-.dark {
-  background-color: var(--darkkMode);
-}
 
-.light {
-  background-color: var(--lightMode);
-}
 
 
 @media (max-width: 768px) {
   .mobile {
     display: block;
+    position: relative;
   }
 
   .desktop {

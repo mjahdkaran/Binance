@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
-import './Header.css'
+import NightlightIcon from '@mui/icons-material/Nightlight';
+import './Header.css';
 
-
-export default function Header() {
+interface HeaderProps {
+    toggle: () => void; // Function type for the toggle function
+    isDarkModeOn: boolean; // Boolean type for dark mode status
+}
+export default function Header({ toggle, isDarkModeOn }: HeaderProps) {
 
 
     return (
@@ -23,14 +27,21 @@ export default function Header() {
 
 
                 <div className='Header_right'>
-                    <button className='button login'>Log In</button>
-                    <button className='button signup'>Sign Up</button>
-                    <WbSunnyIcon
-                        // onClick={clickHandler}
+                    <button className={isDarkModeOn ? 'button login' : 'button login loginlight'} >Log In</button>
+                    <button className='button signup' >Sign Up</button>
+                    {isDarkModeOn ? <NightlightIcon
+                        onClick={toggle}
                         sx={{
-                            //  color: isDarkModeOn ? '#fff' : '#0000', 
-                            '&:hover': { color: 'var(--textHover)' }
-                        }} />
+                            color: 'var(--lightColor)',
+                            '&:hover': { color: 'var(--hoverColor)' }
+                        }} /> :
+                        <WbSunnyIcon
+                            onClick={toggle}
+                            sx={{
+                                color: 'var(--darkColor)',
+                                '&:hover': { color: 'var(--hoverColor)' }
+                            }} />}
+
                 </div>
 
             </header>
