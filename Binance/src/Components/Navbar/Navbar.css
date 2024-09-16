@@ -38,12 +38,22 @@
     width: 100%;
     position: absolute;
     z-index: 999;
-    background-color: green;
+    background-color: yellow;
     display: none;
 
 
 }
 
+
 .show {
     display: block;
+}
+
+.button_holder {
+    background-color: inherit;
+}
+
+.left_menu_item {
+    list-style: none;
+
 }

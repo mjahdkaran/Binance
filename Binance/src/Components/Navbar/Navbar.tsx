@@ -33,7 +33,17 @@ export default function Navbar({ toggle, isDarkModeOn }: HeaderProps) {
 
 
             </div>
-            <div className={isShowMenu ? 'left_menu show' : 'left_menu'}>1</div>
+            <div className={`left_menu ${isShowMenu ? 'show' : ''} ${isDarkModeOn ? 'dark' : 'light'}`}>
+                <div className='button_holder'>
+                    <button className={`button login ${isDarkModeOn ? '' : 'loginlight'}`} >Log In</button>
+                    <button className='button signup_mo' >Sign Up</button></div>
+                <ul className={`left_menu_list ${isDarkModeOn ? 'dark' : 'light'}`}>
+                    <li className='left_menu_item'>Markets</li>
+                    <li className='left_menu_item'>Trade</li>
+                    <li className='left_menu_item'>Derivatives</li>
+
+                </ul>
+            </div>
         </>
 
     )
