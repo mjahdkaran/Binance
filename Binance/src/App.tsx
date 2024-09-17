@@ -1,8 +1,8 @@
 
 
 import './App.css'
-import Navbar from './Components/Navbar/Navbar'
-import Header from './Components/Header/Header'
+import PcMode from './Components/PcMode/PcMode'
+import MobileMod from './Components/MobileMod/MobileMod'
 import { useState } from 'react'
 
 
@@ -19,10 +19,10 @@ function App() {
     >
       <header className={isDarkModeOn ? 'Header_holder dark' : 'Header_holder light'} >
         <div className='desktop'>
-          <Header toggle={toggleDarkModeOn} isDarkModeOn={isDarkModeOn} />
+          <PcMode toggle={toggleDarkModeOn} isDarkModeOn={isDarkModeOn} />
         </div>
 
-        <div className='mobile'><Navbar toggle={toggleDarkModeOn} isDarkModeOn={isDarkModeOn} /></div>
+        <div className='mobile'><MobileMod toggle={toggleDarkModeOn} isDarkModeOn={isDarkModeOn} /></div>
 
       </header>
 

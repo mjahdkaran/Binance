@@ -64,3 +64,8 @@
     margin-bottom: 5px;
 
 }
+
+.theme_holder {
+    display: flex;
+    justify-content: space-between;
+}

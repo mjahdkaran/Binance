@@ -1,13 +1,13 @@
 
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import NightlightIcon from '@mui/icons-material/Nightlight';
-import './Header.css';
+import './PcMode.css';
 
 interface HeaderProps {
     toggle: () => void; // Function type for the toggle function
     isDarkModeOn: boolean; // Boolean type for dark mode status
 }
-export default function Header({ toggle, isDarkModeOn }: HeaderProps) {
+export default function PcMode({ toggle, isDarkModeOn }: HeaderProps) {
 
 
     return (
